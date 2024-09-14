@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador Financiero</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Simulador de Préstamos y Conversiones</h1>
+        <nav>
+            <a href="./index.html">Inicio</a>
+            <a href="./pages/contacto.html">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+       
+        <div class="loan-container">
+            <h2>Simulador de Préstamos</h2>
+            <form id="loan-form">
+                <label for="amount">Monto del préstamo (€):</label>
+                <input type="number" id="amount" required><br>
+
+                <label for="interest">Interés anual (%):</label>
+                <input type="number" id="interest" step="0.01" required><br>
+
+                <label for="years">Años para pagar:</label>
+                <input type="number" id="years" required><br>
+
+                <button type="submit">Calcular Préstamo</button>
+            </form>
+
+            <div id="loan-results">
+                <h3>Resultados del Préstamo</h3>
+                <p id="monthly-payment"></p>
+                <p id="total-payment"></p>
+                <p id="total-interest"></p>
+            </div>
+
+            <div id="currency-converter">
+                <h3>Convertir Moneda</h3>
+                <label for="currency">Elige la moneda:</label>
+                <select id="currency">
+                    <option value="USD">USD (Dólares)</option>
+                    <option value="GBP">GBP (Libras Esterlinas)</option>
+                    <option value="JPY">JPY (Yen Japonés)</option>
+                    <option value="EUR">EUR (Euros)</option>
+                </select>
+                <button id="convert-button">Convertir</button>
+                <p id="converted-value"></p>
+            </div>
+        </div>
+
+        
+        <div id="loan-history">
+            <h3>Historial de Cálculos de Préstamos</h3>
+            <ul id="history-list"></ul>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <h3>Contáctanos</h3>
+            <p>Email: contacto@simuladorprestamos.com</p>
+            <div class="social-media">
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+            </div>
+        </div>
+        <p>2024 Simulador Financiero. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+</html>
